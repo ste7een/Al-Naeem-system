@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
     <head>
         @include('includes.head')
-        <title>Ourstory - @yield('title')</title>
+        <title>Alnaem - @yield('title')</title>
         @livewireStyles
     </head>
     <body>
