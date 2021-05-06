@@ -2,13 +2,13 @@
     <div class="container-fluid mr-5 py-2">
         <div class="col-auto p-0">
             <div class="row">
-                <small>
-                    <nav aria-label="breadcrumb" class="mr-4">
-                        <ol class="breadcrumb border-0 mr-1">
-                            <x-tabuna-breadcrumbs class="breadcrumb-item" active="active"/>
-                        </ol>
-                    </nav>
-                </small>
+                    <small>
+                        <nav aria-label="breadcrumb" class="mr-4">
+                            <ol class="breadcrumb border-0 mr-1">
+                                <x-tabuna-breadcrumbs class="breadcrumb-item" active="active"/>
+                            </ol>
+                        </nav>
+                    </small>
             </div>
         </div>
 
