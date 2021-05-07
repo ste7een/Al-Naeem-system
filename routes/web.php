@@ -1,9 +1,11 @@
 <?php
 
+use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Administrator\AdministratorController;
+use App\Http\Middleware\Role;
 
 /*
 |--------------------------------------------------------------------------

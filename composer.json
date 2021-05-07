@@ -9,12 +9,14 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jantinnerezo/livewire-alert": "^2.1",
         "laravel/framework": "^8.12",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
-        "santigarcor/laratrust": "^6.3"
+        "santigarcor/laratrust": "^6.3",
+        "tabuna/breadcrumbs": "^2.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
