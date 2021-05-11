@@ -4,6 +4,8 @@ use Tabuna\Breadcrumbs\Trail;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\Accountant\AccountantController;
+use App\Http\Controllers\Financial\FinancialController;
 use App\Http\Controllers\Administrator\AdministratorController;
 use App\Http\Middleware\Role;
 
@@ -32,6 +34,17 @@ Route::group(['middleware' => ['auth', Role::class]], function() {
 
         // HOME
         Route::get('/', [AdministratorController::class, 'index'])->name('administrator-home');
+
+    });
+
+    /* Accountant Routes */
+    Route::group(['namespace' => 'Accountant', 'prefix' => 'accountant'], function() {
+
+        // HOME
+        Route::get('/', [AccountantController::class, 'index'])->name('accountant-home');
+
+        // FINANCIAL
+        Route::get('/financial', [FinancialController::class, 'financial_home'])->name('financial-home');
 
     });
 

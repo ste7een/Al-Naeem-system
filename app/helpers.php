@@ -15,7 +15,9 @@
     // GET FEATURED ROLE AS STRING
     function get_role(){
         if (auth()->user()->hasRole('administrator')) return 'administrator';
-        elseif (auth()->user()->hasRole('employee')) return 'employee';
+        elseif (auth()->user()->hasRole('accountant')) return 'accountant';
+        elseif (auth()->user()->hasRole('archive')) return 'archive';
+        elseif (auth()->user()->hasRole('hr')) return 'hr';
         else return false;
     }
 

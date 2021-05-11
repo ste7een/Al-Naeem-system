@@ -9,7 +9,7 @@
 			<div class="col">
 				<!-- Title -->
 				<h1 class="h4 mb-0">
-					Administrator
+					accountant
 				</h1>
 			</div>
 		</div>

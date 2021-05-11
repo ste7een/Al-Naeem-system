@@ -27,6 +27,26 @@ class UsersTableSeeder extends Seeder
         
         $user->attachRole('administrator');
 
+        // Administrator   // id:2 //
+        $user = new User();
+
+        $user->name = 'Accountant';
+        $user->email = 'accountant@alnaeem.com';
+        $user->password = Hash::make('123456');
+        $user->save();
+        
+        $user->attachRole('accountant');
+
+        // Archive   // id:3 //
+        $user = new User();
+
+        $user->name = 'archive';
+        $user->email = 'archive@alnaeem.com';
+        $user->password = Hash::make('123456');
+        $user->save();
+        
+        $user->attachRole('archives');
+
 
     }// end of run
 

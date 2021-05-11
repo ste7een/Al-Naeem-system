@@ -12,13 +12,16 @@
              </button>
           </div>
           <ul class="navbar-nav ml-lg-auto mr-3">
-             <li class="nav-item nav-item-spaced d-none d-lg-block">
-                <a class="nav-link" href="{{route('home')}}">
-                   <i class="fas fa-home"></i>
-                   لوحة التحكم
-                </a>
-             </li>
-            
+            @inject('header', 'App\Http\Controllers\Header\HeaderController')
+            @foreach ($header->getHeaderItems(get_role()) as $item)
+               <li class="nav-item nav-item-spaced d-none d-lg-block">
+                  <a class="nav-link" href="{{route($item[1])}}">
+                     <i class="fas {{$item[2]}}"></i>
+                     {{$item[0]}}
+                  </a>
+               </li>
+             @endforeach
+
              <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    <i class="fas fa-money-check"></i>
@@ -40,7 +43,6 @@
                                </div>
                             </div>
                          </a>
-                        
                       </li>   
                       <li class="dropdown dropdown-animate dropdown-submenu text-right" data-toggle="hover">
                          <a href="#" class="list-group-item list-group-item-action" role="button" aria-haspopup="true" aria-expanded="false">
@@ -87,19 +89,20 @@
                 </div>
              </li>
 
-             <li class="nav-item nav-item-spaced d-none d-lg-block">
-                <a class="nav-link" href="#">
-                   <i class="fas fa-user-tie"></i>
-                   إدارة الموظفين
-                </a>
-             </li>
+             
+               {{-- <li class="nav-item nav-item-spaced d-none d-lg-block">
+                  <a class="nav-link" href="route('{{$item[]}}')">
+                     <i class="fas fa-user-tie"></i>
+                     إدارة الموظفين
+                  </a>
+               </li>
 
              <li class="nav-item nav-item-spaced d-none d-lg-block">
                 <a class="nav-link" href="#">
                     <i class="fas fa-money-bill-alt"></i>
                    الإدارة المالية
                 </a>
-             </li>
+             </li> --}}
 
              <li class="nav-item nav-item-spaced d-none d-lg-block">
                 <a class="nav-link" href="#">
