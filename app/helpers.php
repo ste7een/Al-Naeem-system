@@ -1,13 +1,17 @@
 <?php
-    function get_sidebar_items($role){
+    function get_header_items($role){
         switch ($role){
             case 'administrator':
                 return [
-                    ['home' , 'fa-home' , 'الصفحة الرئيسية'],
+                    ['لوحة التحكم', 'home', 'fa-home'],
+                    ['إدارة الموظفين', 'home' , 'fa-user-tie'],
+                    ['الإدارة المالية', 'financial-home' , 'fa-money-bill-alt'], 
+                    ['Run Order' , 'home' , 'fa-cog' ]
                 ];
-            case 'employee':
+            case 'accountant':
                 return [
-                    ['home' , 'fa-home' , 'الصفحة الرئيسية'],
+                    ['لوحة التحكم', 'home', 'fa-home'],
+                    ['الإدارة المالية', 'financial-home' , 'fa-money-bill-alt'],
                 ];
         }
     }

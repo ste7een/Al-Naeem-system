@@ -12,8 +12,7 @@
              </button>
           </div>
           <ul class="navbar-nav ml-lg-auto mr-3">
-            @inject('header', 'App\Http\Controllers\Header\HeaderController')
-            @foreach ($header->getHeaderItems(get_role()) as $item)
+            @foreach (get_header_items(get_role()) as $item)
                <li class="nav-item nav-item-spaced d-none d-lg-block">
                   <a class="nav-link" href="{{route($item[1])}}">
                      <i class="fas {{$item[2]}}"></i>
@@ -21,7 +20,7 @@
                   </a>
                </li>
              @endforeach
-
+             @accountant
              <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    <i class="fas fa-money-check"></i>
@@ -73,7 +72,7 @@
                                </div>
                             </div>
                          </a>
-                         <div class="dropdown-menu text-center">
+                         <div class="dropdown-menu text-center" >
                             <a class="dropdown-item" href="#">
                                إدارة ارشيف الكتب
                             </a><br>
@@ -88,6 +87,8 @@
                    </ul>
                 </div>
              </li>
+             @endAccountant
+
 
              
                {{-- <li class="nav-item nav-item-spaced d-none d-lg-block">
@@ -103,15 +104,15 @@
                    الإدارة المالية
                 </a>
              </li> --}}
-
+{{-- 
              <li class="nav-item nav-item-spaced d-none d-lg-block">
                 <a class="nav-link" href="#">
                    <i class="fas fa-money-bill-alt"></i>
                    Run Order
                 </a>
-             </li>
+             </li> --}}
           </ul>
-          <!-- info section --> 
+          <!-- Header img and settings section --> 
           <div class="col-auto">
             <a class="nav-link nav-link-icon px-2 pb-1 pt-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-cog"></i>

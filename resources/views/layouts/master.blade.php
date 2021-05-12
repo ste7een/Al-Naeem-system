@@ -8,14 +8,15 @@
     <body>
         @include('includes.header')
         <div class="row">
-            <!-- <div class="col-3"> -->
-                {{-- @include('layouts.sidebar') --}}
-            <!-- </div> -->
+            <div class="col-12 pt-3 pr-9">
+                @yield('tools')
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
                 @yield('content')
             </div>
         </div>
-
         <footer>
             @include('includes.footer')
         </footer>

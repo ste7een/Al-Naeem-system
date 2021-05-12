@@ -19,10 +19,12 @@ class HeaderController extends Controller
           return HeaderController::hr();
     }
     //Adminiatrator header items
-    public function administrator(){
+    public function  (){
         $item = [
             ['لوحة التحكم', 'home', 'fa-home'],
-            ['الإدارة المالية', 'financial-home' , 'fa-user-tie'], 
+            ['إدارة الموظفين', 'home' , 'fa-user-tie'],
+            ['الإدارة المالية', 'financial-home' , 'fa-money-bill-alt'], 
+            ['Run Order' , 'home' , 'fa-cog' ]
         ];
         return $item;
     }
@@ -30,7 +32,7 @@ class HeaderController extends Controller
     public function accountant(){
         $item = [
             ['لوحة التحكم', 'home', 'fa-home'],
-            ['الإدارة المالية', 'financial-home' , 'fa-user-tie'],
+            ['الإدارة المالية', 'financial-home' , 'fa-money-bill-alt'],
         ];
         return $item;
     }

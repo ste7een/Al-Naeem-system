@@ -25,9 +25,9 @@ class UsersTableSeeder extends Seeder
         $user->password = Hash::make('123456');
         $user->save();
         
-        $user->attachRole('administrator');
+        $user->attachRoles(['administrator', 'accountant' , 'archive']);
 
-        // Administrator   // id:2 //
+        // Accountant   // id:2 //
         $user = new User();
 
         $user->name = 'Accountant';
@@ -40,12 +40,12 @@ class UsersTableSeeder extends Seeder
         // Archive   // id:3 //
         $user = new User();
 
-        $user->name = 'archive';
+        $user->name = 'Archive';
         $user->email = 'archive@alnaeem.com';
         $user->password = Hash::make('123456');
         $user->save();
         
-        $user->attachRole('archives');
+        $user->attachRole('archive');
 
 
     }// end of run

@@ -35,6 +35,9 @@ Route::group(['middleware' => ['auth', Role::class]], function() {
         // HOME
         Route::get('/', [AdministratorController::class, 'index'])->name('administrator-home');
 
+        // FINANCIAL
+        // Route::get('/financial', [FinancialController::class, 'financial_home'])->name('financial-home');
+
     });
 
     /* Accountant Routes */
