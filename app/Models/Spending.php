@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Spending extends Model
 {
+    protected $fillable = [ 'spendings'];
     use HasFactory;
 }

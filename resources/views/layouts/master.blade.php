@@ -6,21 +6,22 @@
         @livewireStyles
     </head>
     <body>
-        @include('includes.header')
-        <div class="row">
-            <div class="col-12 pt-3 pr-9">
-                @yield('tools')
+        <div class="row flex-nowrap">
+            <div class="col-lg-12 m-0">
+                <header class="bg-white">
+                    @include('includes.header')
+                </header>
+                <section class="h-main-content m-3 mr-5">
+                    <div class="col-lg-12">
+                        @yield('content')
+                    </div>
+                </section>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                @yield('content')
-            </div>
-        </div>
+
         <footer>
             @include('includes.footer')
         </footer>
-        
         <x-livewire-alert::scripts />
         @livewireScripts
     </body>

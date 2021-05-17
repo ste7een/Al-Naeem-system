@@ -15,11 +15,12 @@ class CreateSpendingsTable extends Migration
     {
         Schema::create('spendings', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('type');
-            $table->integer('amount');
+            $table->integer('amount')->nullable();
+            $table->string('type')->nullable();
+            $table->string('date')->nullable();
+            $table->string('time')->nullable();
             $table->string('description')->nullable();
-            $table->text('bill')->nullable();
+            $table->string('bill')->nullable();
             $table->timestamps();
         });
     }
