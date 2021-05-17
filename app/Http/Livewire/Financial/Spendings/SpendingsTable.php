@@ -8,6 +8,8 @@ use App\Models\Spending;
 class SpendingsTable extends Component
 {
     public $search;
+    protected $listeners = ['$refresh'];
+
     public function render()
     {
         $search = '%'.$this->search.'%';
